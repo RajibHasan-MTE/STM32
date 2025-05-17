@@ -61,6 +61,7 @@ This repository will cover a wide range of STM32 topics, including:
 ## 📁 Project Structure
 
 Organized by MCU series and functional category:
+
 	STM32_Projects/
   	├── STM32F1/
   	│ ├── GPIO_Blink/
