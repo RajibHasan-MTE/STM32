@@ -61,13 +61,55 @@ This repository will cover a wide range of STM32 topics, including:
 ## 📁 Project Structure
 
 Organized by MCU series and functional category:
+	STM32_Projects/
+  	├── STM32F1/
+  	│ ├── GPIO_Blink/
+  	│ ├── UART_Communication/
+  	│ └── ...
+  	├── STM32F4/
+  	│ ├── Flash_Memory_RW/
+  	│ ├── Temperature_Read/
+  	│ └── ...
 
-  STM32_Projects/
-  ├── STM32F1/
-  │ ├── GPIO_Blink/
-  │ ├── UART_Communication/
-  │ └── ...
-  ├── STM32F4/
-  │ ├── Flash_Memory_RW/
-  │ ├── Temperature_Read/
-  │ └── ...
+
+
+Each folder contains source code, CubeMX `.ioc` file, and documentation (if needed).
+
+---
+
+## 💻 Requirements
+
+- [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)
+- STM32F1 / STM32F4 development boards
+- ST-Link V2 or on-board debugger
+- Basic electronics components (sensors, resistors, displays, etc.)
+
+---
+
+## 📜 License
+
+This repository is licensed under the [MIT License](LICENSE).  
+You can use, modify, and distribute it freely for personal and academic use.
+
+---
+
+## 🤝 Contribute
+
+This is an educational project. Contributions are **welcome**!
+If you want to add new STM32 examples, fix bugs, or improve documentation:
+
+1. Fork the repo
+2. Create a branch (`feature/your-topic`)
+3. Commit and push
+4. Open a Pull Request
+
+---
+
+## 🙋 Contact
+
+If you have questions, suggestions, or want to collaborate, feel free to reach out via [GitHub Issues](https://github.com/yourusername/your-repo-name/issues).
+
+---
+
+> **Happy Coding & Learning with STM32!** 🧠🔧⚡
+
