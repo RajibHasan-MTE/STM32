@@ -148,10 +148,7 @@ USBD_CDC_ItfTypeDef USBD_Interface_fops_FS =
 /**
   * @brief  Initializes the CDC media low layer over the FS USB IP
   * @retval USBD_OK if all operations are OK else USBD_FAIL
-
-
   */
-
 static int8_t CDC_Init_FS(void)
 {
   /* USER CODE BEGIN 3 */
