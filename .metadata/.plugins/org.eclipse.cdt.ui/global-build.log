@@ -1,21 +1,14 @@
-11:29:54 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
+17:41:24 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Rajib Hasan\Robotics and Mechatronics engineering\STM32\2.0_W25Q64FV-STM32F4-Read-Write-Demo\Firmware\W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
- 
 arm-none-eabi-size  W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf 
-arm-none-eabi-objdump -h -S W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf  > "W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.list"
    text	   data	    bss	    dec	    hex	filename
-   9460	     12	   1668	  11140	   2b84	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
+   9908	     24	   1696	  11628	   2d6c	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
 Finished building: default.size.stdout
  
-Finished building: W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.list
- 
-11:30:04 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
+17:41:27 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
 make -j4 all 
 arm-none-eabi-size  W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf 
    text	   data	    bss	    dec	    hex	filename
-   9460	     12	   1668	  11140	   2b84	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
+   9908	     24	   1696	  11628	   2d6c	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
 Finished building: default.size.stdout
  
