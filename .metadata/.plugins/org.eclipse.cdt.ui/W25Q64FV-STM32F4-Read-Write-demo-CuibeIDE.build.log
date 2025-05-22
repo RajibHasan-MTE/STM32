@@ -1,10 +1,10 @@
-17:41:27 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
+17:48:44 **** Incremental Build of configuration Debug for project W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE ****
 make -j4 all 
 arm-none-eabi-size  W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf 
    text	   data	    bss	    dec	    hex	filename
-   9908	     24	   1696	  11628	   2d6c	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
+   9896	     24	   1696	  11616	   2d60	W25Q64FV-STM32F4-Read-Write-demo-CuibeIDE.elf
 Finished building: default.size.stdout
  
 
-17:41:27 Build Finished. 0 errors, 0 warnings. (took 530ms)
+17:48:44 Build Finished. 0 errors, 0 warnings. (took 588ms)
 
