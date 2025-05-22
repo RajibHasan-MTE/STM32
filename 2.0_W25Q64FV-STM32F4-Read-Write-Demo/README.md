@@ -112,7 +112,7 @@ Adjust according to your STM32F4 board configuration and set via CubeMX or direc
 ## ID Read
 
 <p align="center">
-  <img src="DOCS/img/id-datasheet.PNG" alt="Pinout" width="800" height="300">
+  <img src="DOCS/img/id-datasheet.PNG" alt="Pinout" width="800" height="50">
 </p>
 
 <p align="center">
