@@ -31,7 +31,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define W25Q_SPI hspi3
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,6 +45,7 @@ SPI_HandleTypeDef hspi3;
 /* USER CODE BEGIN PV */
 uint8_t cnt = 0;
 uint32_t ID=0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,12 +59,60 @@ static void MX_SPI3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
+void W25Q_Delay(uint32_t time)
+{
+	HAL_Delay(time);
+}
+
+void csLOW (void)
+{
+	HAL_GPIO_WritePin (CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET);
+}
+
+void csHIGH (void)
+{
+	HAL_GPIO_WritePin (CS_GPIO_Port, CS_Pin, GPIO_PIN_SET);
+}
+
+void SPI_Write (uint8_t *data, uint8_t len)
+{
+	HAL_SPI_Transmit(&W25Q_SPI, data, len, 2000);
+}
+
+void SPI_Read (uint8_t *data, uint8_t len)
+{
+	HAL_SPI_Receive(&W25Q_SPI, data, len, 5000);
+
+}
+void W25Q_Reset (void)
+{
+	uint8_t tData[2];
+	tData[0] = 0x66;  // enable Reset
+	tData[1] = 0x99;  // Reset
+	csLOW();
+	SPI_Write(tData, 2);
+	csHIGH();
+	W25Q_Delay(100);
+}
+
+uint32_t W25Q_ReadID (void)
+{
+	uint8_t tData = 0x9F;  // Read JEDEC ID
+	uint8_t rData[3];
+	csLOW();
+	SPI_Write(&tData, 1);
+	SPI_Read(rData, 3);
+	csHIGH();
+	return ((rData[0]<<16)|(rData[1]<<8)|rData[2]);
+}
+
 void W25Q64_ReadID(uint8_t* id_buf) {
     uint8_t cmd = 0x9F;
-    HAL_GPIO_WritePin(CS_Pin_GPIO_Port, CS_Pin_Pin, GPIO_PIN_RESET); // CS Low
+    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET); // CS Low
     HAL_SPI_Transmit(&hspi3, &cmd, 1, HAL_MAX_DELAY);
     HAL_SPI_Receive(&hspi3, id_buf, 3, HAL_MAX_DELAY); // Receive Manufacturer ID, Memory Type, Capacity
-    HAL_GPIO_WritePin(CS_Pin_GPIO_Port, CS_Pin_Pin, GPIO_PIN_SET); // CS High
+    HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_SET); // CS High
 }
 uint8_t id[3];
 /* USER CODE END 0 */
@@ -76,7 +125,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  W25Q64_ReadID(id);
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -99,7 +148,9 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
-
+  W25Q64_ReadID(id);
+  W25Q_Reset();
+  ID = W25Q_ReadID();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -216,14 +267,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(CS_Pin_GPIO_Port, CS_Pin_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(CS_GPIO_Port, CS_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : CS_Pin_Pin */
-  GPIO_InitStruct.Pin = CS_Pin_Pin;
+  /*Configure GPIO pin : CS_Pin */
+  GPIO_InitStruct.Pin = CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CS_Pin_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(CS_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

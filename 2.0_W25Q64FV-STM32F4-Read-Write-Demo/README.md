@@ -7,13 +7,8 @@ Memory Size: 64 Megabits (8 Megabytes)
 ## 📌 W25Q64FV Flash Memory IC Pinout
 
 <p align="center">
-  <img src="DOCS/img.jpg" alt="Pinout" width="800" height="300">
+  <img src="DOCS/img/W25Q64FV-Pinout.jpg" alt="Pinout" width="800" height="300">
 </p>
-
-<p align="center">
-  <img src="https://media.giphy.com/media/your-gif-link.gif" alt="Animated Pinout" width="800" height="300">
-</p>
-
 
 # 🧠 Memory Organization:
 - Pages: 256 Bytes each
@@ -113,6 +108,16 @@ Adjust according to your STM32F4 board configuration and set via CubeMX or direc
 4. Flash to your STM32F4 board.
 
 5. Observe flash operations via UART or debugger.
+
+## ID Read
+
+<p align="center">
+  <img src="DOCS/img/id-datasheet.PNG" alt="Pinout" width="800" height="300">
+</p>
+
+<p align="center">
+  <img src="DOCS/img/id-read.PNG" alt="Animated Pinout" width="800" height="300">
+</p>
 
 📖 Learning Resources
 W25Q64FV Datasheet (Winbond)
