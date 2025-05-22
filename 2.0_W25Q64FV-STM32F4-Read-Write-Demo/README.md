@@ -83,14 +83,14 @@ Memory Size: 64 Megabits (8 Megabytes)
  	└── W25Q64FV-Demo.ioc # STM32CubeMX project file
 
 
-## 🔌 SPI Pin Mapping Example (for STM32F4)
+## 🔌 SPI-3 Pin Mapping Example (for STM32F4)
 
-| Signal  | STM32F4 Pin |
-|---------|-------------|
-| CS      | GPIOA_PIN_4 |
-| SCK     | GPIOA_PIN_5 |
-| MISO    | GPIOA_PIN_6 |
-| MOSI    | GPIOA_PIN_7 |
+| Signal  | STM32F4 Pin  |
+|---------|--------------|
+| CS      | GPIOB_PIN_3  |
+| SCK     | GPIOC_PIN_10 |
+| MISO    | GPIOC_PIN_11 |
+| MOSI    | GPIOC_PIN_12 |
 
 Adjust according to your STM32F4 board configuration and set via CubeMX or directly in code.
 
