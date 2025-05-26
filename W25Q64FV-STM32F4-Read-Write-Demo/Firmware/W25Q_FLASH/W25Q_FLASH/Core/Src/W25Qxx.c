@@ -2,7 +2,7 @@
  * W25Qxx.c
  *
  *  Created on: Jul 15, 2023
- *      Author: controllerstech
+ *      Author: Rajib Hasan
  */
 
 
