@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp.sp
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\startup_stm32f401xc.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\main.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_it.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_msp.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\w25qxx.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_spi.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_rcc.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_rcc_ex.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_flash.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_flash_ex.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_flash_ramfunc.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_gpio.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_dma_ex.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_dma.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_pwr.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_pwr_ex.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_cortex.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_exti.o"
+"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\system_stm32f4xx.o"
+--strict --scatter "W25Q64FV-STM32F4-Read-Write-Demo-Keil-cuibeMX\W25Q64FV-STM32F4-Read-Write-Demo-Keil-cuibeMX.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "W25Q64FV-STM32F4-Read-Write-Demo-Keil-cuibeMX.map" -o W25Q64FV-STM32F4-Read-Write-Demo-Keil-cuibeMX\W25Q64FV-STM32F4-Read-Write-Demo-Keil-cuibeMX.axf
