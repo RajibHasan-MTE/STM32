@@ -1,0 +1,6 @@
+../Core/Src/main.c:84:6:MPU6050_Init	2
+../Core/Src/main.c:113:6:MPU6050_Read_Accel	1
+../Core/Src/main.c:135:6:MPU6050_Read_Gyro	1
+../Core/Src/main.c:249:6:SystemClock_Config	3
+../Core/Src/main.c:161:5:main	2
+../Core/Src/main.c:347:6:Error_Handler	1

@@ -3,7 +3,6 @@
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\main.o"
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_it.o"
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_msp.o"
-"w25q64fv-stm32f4-read-write-demo-keil-cuibemx\w25qxx.o"
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_spi.o"
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_rcc.o"
 "w25q64fv-stm32f4-read-write-demo-keil-cuibemx\stm32f4xx_hal_rcc_ex.o"

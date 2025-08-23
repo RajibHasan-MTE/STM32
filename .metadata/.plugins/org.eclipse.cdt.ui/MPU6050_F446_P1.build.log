@@ -1,0 +1,10 @@
+12:42:12 **** Incremental Build of configuration Debug for project MPU6050_F446_P1 ****
+make -j4 all 
+arm-none-eabi-size  MPU6050_F446_P1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28464	    468	   2028	  30960	   78f0	MPU6050_F446_P1.elf
+Finished building: default.size.stdout
+ 
+
+12:42:12 Build Finished. 0 errors, 0 warnings. (took 490ms)
+
